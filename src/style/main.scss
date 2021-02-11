@@ -1,0 +1,130 @@
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 3px 6px;
+    margin: 0 0 12px;
+}
+button {
+    border: 1px solid var(--border-color-dark);
+    background: var(--button-bg-color);
+    padding: 3px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        background: var(--button-bg-color-hover);
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.login {
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 15px 10px;
+    width: 300px;
+    margin: auto;
+}
+.table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    background: var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    width: 700px; // 40 * 16 = 640
+    height: 700px;
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 10000000000;
+    }
+    &[data-order="0"]::after {
+        bottom: 0;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid blue;
+        margin-left: -5px;
+    }
+    &[data-order="1"]::after, &[data-order="-3"]::after {
+        top: 50%;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid blue;
+        margin-top: -5px;
+    }
+    &[data-order="2"]::after, &[data-order="-2"]::after {
+        top: 0;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid blue;
+        margin-left: -5px;
+    }
+    &[data-order="3"]::after, &[data-order="-1"]::after {
+        top: 50%;
+        left: 0;
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid blue;
+        margin-top: -5px;
+    }
+
+    .other {
+        width: 600px;
+        height: 600px;
+        background: #e9be4f;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .my {
+        width: 690px;
+        display: flex;
+        justify-self: center;
+    }
+}
+.majan {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    border: 2px solid var(--majan-border-color);
+    background: var(--majan-bg-color);
+    margin: 5px;
+    padding: 4px 2px 2px;
+    height: 40px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    &:hover {
+        background: var(--majan-bg-color-hover);
+    }
+    &.active {
+        background: var(--majan-bg-color-active);
+        margin-bottom: 10px;
+        margin-top: 0px;
+        &:hover {
+            background: var(--majan-bg-color-active);
+        }
+    }
+    &::after {
+        content: attr(data-text);
+    }
+}

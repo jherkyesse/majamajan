@@ -1,0 +1,21 @@
+{
+  "plugins": ["react", "prettier"],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "no-shadow": "off",
+    "semi": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
+}

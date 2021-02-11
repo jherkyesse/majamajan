@@ -1,0 +1,14 @@
+@import './colors.scss';
+
+body {
+    --border-color: #{$BORDER_COLOR};
+    --white: #{$WHITE};
+    --majan-border-color: #{$MAJAN_BORDER_COLOR};
+    --majan-bg-color: #{$MAJAN_BG_COLOR};
+    --majan-bg-color-hover: #{$MAJAN_BG_COLOR_HOVER};
+    --majan-bg-color-active: #{$MAJAN_BG_COLOR_ACTIVE};
+    --border-color-dark: #{$BORDER_COLOR_DARK};
+    --button-bg-color: #{$BUTTON_BG_COLOR};
+    --button-bg-color-hover: #{$BUTTON_BG_COLOR_HOVER};
+}
+
